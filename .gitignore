@@ -10,3 +10,6 @@
 # Ignore find(Mac's filer) config files.
 .DS_Store
 
+# Ignore other developer's code
+elisp/*
+el-get/*

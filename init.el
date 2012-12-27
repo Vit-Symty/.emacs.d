@@ -1,9 +1,16 @@
-(set-language-environment 'Japanese)
+;; Configurations for Emacs
+; Language & Coding System
 (prefer-coding-system 'utf-8-unix)
+(set-language-environment 'Japanese)
+(set-locale-environment "ja_JP.UTF-8")
+(set-default-coding-systems 'utf-8-unix)
+(set-selection-coding-system 'utf-8-unix)
+(set-buffer-file-coding-system 'utf-8-unix)
 
+; show debug info
 (setq debug-on-error t)
 
-;; load-pathの追加関数
+;; load-path を追加する関数を定義
 (defun add-to-load-path (&rest paths)
   (let (path)
     (dolist (path paths paths)
@@ -12,11 +19,22 @@
         (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
             (normal-top-level-add-subdirs-to-load-path))))))
 
-;; load-pathに追加するフォルダ
-;; 2つ以上フォルダを指定する場合の引数 => (add-to-load-path "elisp" "xxx" "xxx")
-(add-to-load-path "conf" "elisp" "el-get")
+;; elispとconfディレクトリをサブディレクトリごとload-pathに追加
+(add-to-load-path "conf" "elisp" "elpa")
 
-;; el-get config
-;(setq el-get-dir "~/.emacs.d/el-get/")
-;(require 'el-get)
-;(el-get 'sync)
+;; common lisp
+(require 'cl)
+
+;; 初期化ファイル読み込み
+(load "init_mode.el")
+(load "init_window.el")
+(load "init_locale.el")
+(load "init_face.el")
+(load "init_keybind.el")
+(load "init_modeline.el")
+
+;; package config
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
