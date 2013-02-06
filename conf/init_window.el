@@ -16,7 +16,7 @@
       (append
        '((top . 32) ;フレームのY位置(ピクセル数)
          (left . 450) ;フレームのX位置(ピクセル数)
-         (width . 64) ;フレーム幅(文字数)
+         (width . 128) ;フレーム幅(文字数)
          (height . 52) ;フレーム高(文字数)
          )
        initial-frame-alist)
@@ -24,7 +24,7 @@
 ;; 新規フレームのデフォルト設定
 (setq default-frame-alist
       (append
-       '((width . 64)  ;フレーム幅(文字数)
+       '((width . 128)  ;フレーム幅(文字数)
          (height . 52) ;フレーム高(文字数)
         )
        default-frame-alist)

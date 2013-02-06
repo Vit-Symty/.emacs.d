@@ -8,6 +8,7 @@
 (line-number-mode t)
 
 ;; モードラインに現在時刻を表示する
+(setq display-time-format "%Y-%m-%d %H:%M")
 (display-time)
 
 ;; モードラインの割合表示を総行数表示

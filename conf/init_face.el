@@ -1,19 +1,21 @@
-;; Windowsで英数と日本語にMeiryoを指定
+;; Windowsで英数Inconsolataと日本語Migu 2Mを指定
 ;; Macで英数と日本語にRictyを指定
 (let ((ws window-system))
   (cond ((eq ws 'w32)
          (set-face-attribute 'default nil
-                             :family "Meiryo"  ;; 英数
+                             :family "Inconsolata"  ;; 英数
                              :height 100)
-         (set-fontset-font nil 'japanese-jisx0208 (font-spec :family "Meiryo")))  ;; 日本語
+         (set-fontset-font nil 'japanese-jisx0208 (font-spec :family "Migu 2M")))  ;; 日本語
         ((eq ws 'ns)
          (set-face-attribute 'default nil
-                             :family "Ricty"  ;; 英数
+                             :family "Inconsolata"  ;; 英数
                              :height 120)
-         (set-fontset-font nil 'japanese-jisx0208 (font-spec :family "Ricty")))))  ;; 日本語
+         (set-fontset-font nil 'japanese-jisx0208 (font-spec :family "Migu 2M")))))  ;; 日本語
 
-
-(require 'twilight-theme)
+;; Theme
+;(require 'solarized-light-theme)
+(require 'ir-black-theme)
+;(require 'github-theme)
 
 ;;フォントカラー
 (global-font-lock-mode t)
@@ -82,7 +84,7 @@
 (show-paren-mode t)
 (setq show-paren-delay 0)
 (setq show-paren-style 'expression)
-;(set-face-background 'show-paren-match-face "#500")
+(set-face-background 'show-paren-match-face "slate gray")
 
 ;;カーソル行にアンダーラインを表示
 (defface hlline-face

@@ -7,3 +7,8 @@
 ; ^C-Ret で矩形選択
 (cua-mode t)
 (setq cua-enable-cua-keys nil)
+
+; for Develop
+(global-set-key (kbd "C-;") 'comment-dwim) ;; M-; is the defualt
+(global-set-key (kbd "C-c c") 'compile)
+
