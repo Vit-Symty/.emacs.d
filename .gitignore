@@ -14,8 +14,8 @@
 .DS_Store
 
 # Ignore other developer's code
-elisp/*
-elpa/*
+# elisp/*
+# elpa/*
 
 # Ignore files
 auto-save-list
