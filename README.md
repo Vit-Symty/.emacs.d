@@ -6,7 +6,6 @@
 ### この設定の使用環境
 
 OS : MacOSX 10.8.2
-
 Emacs : 24.2
 
 ### インストール方法
@@ -14,7 +13,9 @@ Emacs : 24.2
     $ git clone git://github.com/Vit-Symty/.emacs.d.git .
 
 ### 利用しているパッケージ
+
 利用しているパッケージを列挙します。
+
     anti-zenburn-theme 20130129.... installed  Low-contrast Zenburn-inverted theme [source: github]
     apache-mode        20080905.553 installed  major mode for editing Apache configuration files [source: wiki]
     auto-complete      20130122.... installed  Auto Completion for GNU Emacs [source: github]
