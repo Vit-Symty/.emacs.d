@@ -9,7 +9,7 @@
 (set-buffer-file-coding-system 'utf-8-unix)
 
 ; show debug info
-(setq debug-on-error t)
+(setq debug-on-error 0)
 
 ;; When opened from Desktep entry, PATH won't be set to shell's value.
 (let ((path-str

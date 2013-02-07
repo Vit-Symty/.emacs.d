@@ -23,7 +23,10 @@
 ;; ruby-mode
 ; (setq ruby-block-highlight-toggle 'overlay)
 
-;; Markdown-mode
+;; Sass mager mode
+(add-to-list 'auto-mode-alist '("\\.scss$" . sass-mode))
+
+;; markdown-mode+
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
 
 ;; 自動コンパイル

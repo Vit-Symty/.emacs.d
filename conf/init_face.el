@@ -13,8 +13,8 @@
          (set-fontset-font nil 'japanese-jisx0208 (font-spec :family "Migu 2M")))))  ;; 日本語
 
 ;; Theme
-;(require 'solarized-light-theme)
-(require 'ir-black-theme)
+(require 'solarized-dark-theme)
+;(require 'ir-black-theme)
 ;(require 'github-theme)
 
 ;;フォントカラー
@@ -71,20 +71,19 @@
 (ad-activate 'font-lock-mode)
 (add-hook 'find-file-hooks '(lambda ()
                               (if font-lock-mode nil (font-lock-mode t))
-                              )
-)
+                              ))
 
 ;; 1行ずつスクロール
 (setq scroll-conservatively 35
       scroll-margin 0
       scroll-step 1)
-(setq comint-scroll-show-maximum-output t) ;; shell-mode
+(setq comint-scroll-show-maximum-output t) ;;shell-mode
 
 ;;対応する括弧を強調する。
 (show-paren-mode t)
 (setq show-paren-delay 0)
 (setq show-paren-style 'expression)
-(set-face-background 'show-paren-match-face "slate gray")
+(set-face-background 'show-paren-match-face "LightCyan")
 
 ;;カーソル行にアンダーラインを表示
 (defface hlline-face
@@ -97,8 +96,8 @@
     (t
      ()))
   "*Face used by hl-line.")
-(setq hl-line-face 'hlline-face)
-;; (setq hl-line-face 'underline) ; 下線
+;(setq hl-line-face 'hlline-face) ;バックグラウンドカラー
+(setq hl-line-face 'underline) ;下線
 (global-hl-line-mode)
 
 ;; インデント時にタブを使わないでスペースを使う
@@ -116,6 +115,7 @@
 ;; line num
 (require 'linum)
 (global-linum-mode t)
+(setq linum-format "%6d")
 
 ;; 1行ずつスクロール
 (setq scroll-conservatively 35
