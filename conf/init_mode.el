@@ -21,10 +21,10 @@
 (ac-config-default)
 
 ;; ruby-mode
-;(require 'ruby-mode)
-;(require 'ruby-block)
-;(ruby-block-mode t)
-(setq ruby-block-highlight-toggle 'overlay)
+; (setq ruby-block-highlight-toggle 'overlay)
+
+;; Markdown-mode
+(add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
 
 ;; 自動コンパイル
 ;; http://www.emacswiki.org/emacs/auto-async-byte-compile.el
