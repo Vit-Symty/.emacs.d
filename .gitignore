@@ -10,9 +10,6 @@
 # Ignore Compiled elisp file
 *.elc
 
-# Ignore find(Mac's filer) config files.
-.DS_Store
-
 # Ignore other developer's code
 elisp/*
 elpa/*
@@ -20,3 +17,14 @@ elpa/*
 # Ignore files
 auto-save-list
 ac-comphist.dat
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
