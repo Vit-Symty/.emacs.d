@@ -7,9 +7,16 @@
 # Ignore Emacs's backup files.
 *~
 
+# Ignore Compiled elisp file
+*.elc
+
 # Ignore find(Mac's filer) config files.
 .DS_Store
 
 # Ignore other developer's code
 elisp/*
-el-get/*
+elpa/*
+
+# Ignore files
+auto-save-list
+ac-comphist.dat
