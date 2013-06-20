@@ -12,15 +12,15 @@
       (format "%%f - Emacs@%s" (system-name)))
 
 ;; 初期フレーム設定
-(setq initial-frame-alist
-      (append
-       '((top . 32) ;フレームのY位置(ピクセル数)
-         (left . 450) ;フレームのX位置(ピクセル数)
-         (width . 128) ;フレーム幅(文字数)
-         (height . 52) ;フレーム高(文字数)
-         )
-       initial-frame-alist)
-)
+;(setq initial-frame-alist
+;      (append
+;       '((top . 32) ;フレームのY位置(ピクセル数)
+;         (left . 450) ;フレームのX位置(ピクセル数)
+;         (width . 128) ;フレーム幅(文字数)
+;         (height . 52) ;フレーム高(文字数)
+;         )
+;       initial-frame-alist)
+;)
 ;; 新規フレームのデフォルト設定
 (setq default-frame-alist
       (append

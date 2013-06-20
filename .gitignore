@@ -17,6 +17,8 @@ elpa/*
 # Ignore files
 auto-save-list
 ac-comphist.dat
+session.*
+url/cookies
 
 # OS generated files #
 ######################

@@ -12,3 +12,7 @@
 (global-set-key (kbd "C-;") 'comment-dwim) ;; M-; is the defualt
 (global-set-key (kbd "C-c c") 'compile)
 
+; for term-mode
+(global-set-key (kbd "C-c t") '(lambda ()
+                                (interactive)
+                                (term shell-file-name)))

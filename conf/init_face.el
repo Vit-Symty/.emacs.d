@@ -1,16 +1,19 @@
 ;; Windowsで英数Inconsolataと日本語Migu 2Mを指定
 ;; Macで英数と日本語にRictyを指定
-(let ((ws window-system))
-  (cond ((eq ws 'w32)
-         (set-face-attribute 'default nil
-                             :family "Inconsolata"  ;; 英数
-                             :height 100)
-         (set-fontset-font nil 'japanese-jisx0208 (font-spec :family "Migu 2M")))  ;; 日本語
-        ((eq ws 'ns)
-         (set-face-attribute 'default nil
-                             :family "Inconsolata"  ;; 英数
-                             :height 120)
-         (set-fontset-font nil 'japanese-jisx0208 (font-spec :family "Migu 2M")))))  ;; 日本語
+;(let ((ws window-system))
+;  (cond ((eq ws 'w32)
+;         (set-face-attribute 'default nil
+;                             :family "Inconsolata"  ;; 英数
+;                             :height 100)
+;         (set-fontset-font nil 'japanese-jisx0208 (font-spec :family "Migu 2M")))  ;; 日本語
+;        ((eq ws 'ns)
+;         (set-face-attribute 'default nil
+;                             :family "Ricty"
+;                             :height 100)
+;         (set-fontset-font nil 'japanese-jisx0208
+;                           (font-spec :family "Ricty"))
+;         )))  ;; 日本語
+(add-to-list 'default-frame-alist '(font . "ricty discord-10"))
 
 ;; Theme
 (require 'solarized-dark-theme)
@@ -18,33 +21,7 @@
 ;(require 'github-theme)
 
 ;;フォントカラー
-(global-font-lock-mode t)
-;(if window-system
-;    (progn
-;      (add-to-list 'default-frame-alist '(foreground-color . "snow"))   ;文字色設定
-;      (add-to-list 'default-frame-alist '(background-color . "gray15")) ;背景色設定
-;      (add-to-list 'default-frame-alist '(cursor-color . "gray40"))     ;カーソル色設定
-;      (add-to-list 'default-frame-alist '(mouse-color . "SlateBlue4"))  ;マウスポインタ
-;      (set-face-foreground 'modeline "gray85")                          ;モードライン文字
-;      (set-face-background 'modeline "gray35")                          ;モードライン背景
-;      (set-face-foreground 'region "snow")                              ;選択中リージョン文字
-;      (set-face-background 'region "gray20")                            ;選択中リージョン背景
-;      (set-face-foreground 'mode-line-inactive "gray30")                ;モードライン(インアクティブ)文字
-;      (set-face-background 'mode-line-inactive "gray85")                ;モードライン(インアクティブ)背景
-;      (set-face-foreground 'font-lock-comment-face "ForestGreen")    ;コメント
-;      (set-face-foreground 'font-lock-string-face  "moccasin")       ;文字列
-;      (set-face-foreground 'font-lock-keyword-face "LightSlateBlue")    ;キーワード
-;      (set-face-foreground 'font-lock-function-name-face "SlateBlue2")  ;ファンクション
-;      (set-face-bold-p 'font-lock-function-name-face t)
-;      ;(set-face-foreground 'font-lock-variable-name-face "MediumBlue") ;変数
-;      ;(set-face-foreground 'font-lock-variable-name-face "NavajoWhite3") ;変数
-;      (set-face-foreground 'font-lock-type-face "LightSeaGreen")
-;      (set-face-foreground 'font-lock-builtin-face "MediumPurple3")
-;      (set-face-foreground 'font-lock-constant-face "bisque3") ;定数
-;      (set-face-foreground 'font-lock-warning-face "firebrick3")
-;      (set-face-bold-p 'font-lock-warning-face nil)
-;    )
-;)
+;(global-font-lock-mode t)
 
 ;; 行末の空白を強調表示
 (setq-default show-trailing-whitespace t)
@@ -115,10 +92,4 @@
 ;; line num
 (require 'linum)
 (global-linum-mode t)
-(setq linum-format "%6d")
-
-;; 1行ずつスクロール
-(setq scroll-conservatively 35
-      scroll-margin 0
-      scroll-step 1)
-(setq comint-scroll-show-maximum-output t) ;; shell-mode
+(setq linum-format "%06d")
