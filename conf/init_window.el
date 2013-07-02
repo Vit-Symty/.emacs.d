@@ -22,13 +22,22 @@
 ;       initial-frame-alist)
 ;)
 ;; 新規フレームのデフォルト設定
-(setq default-frame-alist
-      (append
-       '((width . 128)  ;フレーム幅(文字数)
-         (height . 52) ;フレーム高(文字数)
-        )
-       default-frame-alist)
-)
+(cond ((string-match "apple-darwin" system-configuration)
+       (setq default-frame-alist
+             (append
+              '((width . 64)  ;フレーム幅(文字数)
+                (height . 52) ;フレーム高(文字数)
+                )
+              default-frame-alist)
+             ))
+      ((string-match "linux" system-configuration)
+       (setq default-frame-alist
+             (append
+              '((width . 128)  ;フレーム幅(文字数)
+                (height . 52) ;フレーム高(文字数)
+                )
+              default-frame-alist)
+             )))
 
 ;; ウインドウ透明度設定
 (add-to-list 'default-frame-alist '(alpha . 95))

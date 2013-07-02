@@ -55,38 +55,38 @@
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 
 ;; howm
-(setq howm-view-title-header "#")
-(setq howm-view-title-regexp-grep "^/# +[^2]")
-(setq howm-view-title-regexp "^\\#\\( +\\([^2].*\\)\\|\\)$")
-(setq howm-menu-lang 'ja)
-(global-set-key "\C-c,," 'hown-menu)
-(require 'howm)
+;(setq howm-view-title-header "#")
+;(setq howm-view-title-regexp-grep "^/# +[^2]")
+;(setq howm-view-title-regexp "^\\#\\( +\\([^2].*\\)\\|\\)$")
+;(setq howm-menu-lang 'ja)
+;(global-set-key "\C-c,," 'hown-menu)
+;(require 'howm)
 ;(setq howm-directory "~/Dropbox/howm")
 ; 完了ずみ todo は表示しない
-(setq howm-todo-menu-types "[-+~!]")
-(setq howm-menu-expiry-hours nil)
+;(setq howm-todo-menu-types "[-+~!]")
+;(setq howm-menu-expiry-hours nil)
 ; 内容が 0 ならファイルごと削除する
-(if (not (memq 'delete-file-if-no-contents after-save-hook))
-    (setq after-save-hook
-          (cons 'delete-file-if-no-contents after-save-hook)))
-(defun delete-file-if-no-contents ()
-  (when (and
-         (buffer-file-name (current-buffer))
-         (string-match "\\.howm" (buffer-file-name (current-buffer)))
-         (= (point-min) (point-max)))
-    (delete-file
-     (buffer-file-name (current-buffer)))))
+;(if (not (memq 'delete-file-if-no-contents after-save-hook))
+;    (setq after-save-hook
+;          (cons 'delete-file-if-no-contents after-save-hook)))
+;(defun delete-file-if-no-contents ()
+;  (when (and
+;         (buffer-file-name (current-buffer))
+;         (string-match "\\.howm" (buffer-file-name (current-buffer)))
+;         (= (point-min) (point-max)))
+;    (delete-file
+;     (buffer-file-name (current-buffer)))))
 ;; M-t で今日の日付で todo 入力。
-(defun oreore-howm-insert-todo ()
-  (interactive)
-  (insert (format-time-string "[%Y-%m-%d]+ ")))
-(define-key esc-map
-  "t"
-  'oreore-howm-insert-todo)
+;(defun oreore-howm-insert-todo ()
+;  (interactive)
+;  (insert (format-time-string "[%Y-%m-%d]+ ")))
+;(define-key esc-map
+;  "t"
+;  'oreore-howm-insert-todo)
 ; markdown-mode でメモる
-(setq howm-template "# %title%cursor\n%date\n")
+;(setq howm-template "# %title%cursor\n%date\n")
 ;(setq howm-menu-file "~/Dropbox/.howm-menu")
-(setq howm-file-name-format "%Y%m%d-%H%M%S.md")
+;(setq howm-file-name-format "%Y%m%d-%H%M%S.md")
 
 ;; ruby-mode
 ; (setq ruby-block-highlight-toggle 'overlay)

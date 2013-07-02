@@ -1,31 +1,25 @@
-;; Windowsで英数Inconsolataと日本語Migu 2Mを指定
-;; Macで英数と日本語にRictyを指定
-;(let ((ws window-system))
-;  (cond ((eq ws 'w32)
-;         (set-face-attribute 'default nil
-;                             :family "Inconsolata"  ;; 英数
-;                             :height 100)
-;         (set-fontset-font nil 'japanese-jisx0208 (font-spec :family "Migu 2M")))  ;; 日本語
-;        ((eq ws 'ns)
-;         (set-face-attribute 'default nil
-;                             :family "Ricty"
-;                             :height 100)
-;         (set-fontset-font nil 'japanese-jisx0208
-;                           (font-spec :family "Ricty"))
-;         )))  ;; 日本語
-(add-to-list 'default-frame-alist '(font . "ricty discord-10"))
+; font
+(cond ((eq window-system 'w32)
+       (set-face-attribute 'default nil
+                           :family "Inconsolata"  ;; 英数
+                           :height 100)
+       (set-fontset-font nil 'japanese-jisx0208 (font-spec :family "Migu 2M")))
+      ((string-match "apple-darwin" system-configuration)
+       (set-face-attribute 'default nil
+                           :family "Ricty Discord"
+                           :height 120)
+       (set-fontset-font nil 'japanese-jisx0208 (font-spec :family "Ricty Discord")))
+      ((string-match "linux" system-configuration)
+       (add-to-list 'default-frame-alist '(font . "ricty discord-10"))))
 
 ;; Theme
 (require 'solarized-dark-theme)
 ;(require 'ir-black-theme)
 ;(require 'github-theme)
 
-;;フォントカラー
-;(global-font-lock-mode t)
-
 ;; 行末の空白を強調表示
 (setq-default show-trailing-whitespace t)
-(set-face-background 'trailing-whitespace "#b14770")
+;(set-face-background 'trailing-whitespace "#b14770")
 
 ;; 特殊文字強調(タブ,全角空白)
 (defface my-face-tab '((t (:background "gray26"))) nil)
