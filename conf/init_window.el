@@ -25,7 +25,7 @@
 (cond ((string-match "apple-darwin" system-configuration)
        (setq default-frame-alist
              (append
-              '((width . 64)  ;フレーム幅(文字数)
+              '((width . 128)  ;フレーム幅(文字数)
                 (height . 52) ;フレーム高(文字数)
                 )
               default-frame-alist)
