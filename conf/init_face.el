@@ -10,7 +10,7 @@
                            :height 120)
        (set-fontset-font nil 'japanese-jisx0208 (font-spec :family "Ricty Discord")))
       ((string-match "linux" system-configuration)
-       (add-to-list 'default-frame-alist '(font . "ricty discord-10"))))
+       (add-to-list 'default-frame-alist '(font . "ricty discord-9"))))
 
 ;; Theme
 (require 'solarized-dark-theme)

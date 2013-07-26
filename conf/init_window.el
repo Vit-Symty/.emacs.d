@@ -33,8 +33,8 @@
       ((string-match "linux" system-configuration)
        (setq default-frame-alist
              (append
-              '((width . 128)  ;フレーム幅(文字数)
-                (height . 52) ;フレーム高(文字数)
+              '((width . 192)  ;フレーム幅(文字数)
+                (height . 56) ;フレーム高(文字数)
                 )
               default-frame-alist)
              )))

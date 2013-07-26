@@ -41,9 +41,9 @@
 (package-initialize)
 
 ;; 初期化ファイル読み込み
-(load "init_mode.el")      ;; メジャーモードの設定
 (load "init_window.el")    ;; ウインドウの設定
-(load "init_locale.el")    ;; 言語固有(日本語)の設定
 (load "init_face.el")      ;; カラースキーマやテーマの設定
+(load "init_mode.el")      ;; メジャーモードの設定
+(load "init_locale.el")    ;; 言語固有(日本語)の設定
 (load "init_keybind.el")   ;; キーバインドの設定
 (load "init_modeline.el")  ;; モードラインの表示設定
