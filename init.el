@@ -1,5 +1,3 @@
-;; Configurations for Emacs
-
 ; Language & Coding System
 (prefer-coding-system 'utf-8-unix)
 (set-language-environment 'Japanese)
@@ -30,20 +28,10 @@
 ;; conf/elpa/elispディレクトリをサブディレクトリごとload-pathに追加
 (add-to-load-path "conf" "elpa" "elisp")
 
+;; 初期化ファイル読み込み
+(require 'init-loader)
+(setq init-loader-show-log-after-init nil)
+(init-loader-load "~/.emacs.d/conf")
+
 ;; common lisp
 (require 'cl)
-
-;; package config
-(require 'package)
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")))
-(package-initialize)
-
-;; 初期化ファイル読み込み
-(load "init_window.el")    ;; ウインドウの設定
-(load "init_face.el")      ;; カラースキーマやテーマの設定
-(load "init_mode.el")      ;; メジャーモードの設定
-(load "init_locale.el")    ;; 言語固有(日本語)の設定
-(load "init_keybind.el")   ;; キーバインドの設定
-(load "init_modeline.el")  ;; モードラインの表示設定
