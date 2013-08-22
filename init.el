@@ -28,10 +28,10 @@
 ;; conf/elpa/elispディレクトリをサブディレクトリごとload-pathに追加
 (add-to-load-path "conf" "elpa" "elisp")
 
+;; common lisp
+(require 'cl)
+
 ;; 初期化ファイル読み込み
 (require 'init-loader)
 (setq init-loader-show-log-after-init nil)
 (init-loader-load "~/.emacs.d/conf")
-
-;; common lisp
-(require 'cl)

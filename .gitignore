@@ -19,6 +19,9 @@ auto-save-list
 ac-comphist.dat
 session.*
 url/cookies
+places
+var
+usr
 
 # OS generated files #
 ######################
