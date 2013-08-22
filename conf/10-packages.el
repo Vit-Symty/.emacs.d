@@ -57,6 +57,7 @@
     sql-indent
     ssh-config-mode
     sublime-themes
+    tronesque-theme
     yaml-mode
     yard-mode
     yasnippet
