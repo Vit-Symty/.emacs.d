@@ -16,6 +16,8 @@
     gist
     git-commit-mode
     git-rebase-mode
+    gitconfig-mode
+    gitignore-mode
     google-translate
     helm
     helm-gist
