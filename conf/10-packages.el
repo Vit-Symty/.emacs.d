@@ -12,7 +12,6 @@
     coffee-mode
     dropdown-list
     egg
-    emmet-mode
     gist
     git-commit-mode
     git-rebase-mode
@@ -32,6 +31,7 @@
     helm-themes
     init-loader
     js3-mode
+    less-css-mode
     markdown-mode
     migemo
     multi-term
@@ -51,6 +51,7 @@
     ruby-interpolation
     ruby-refactor
     ruby-tools
+    sass-mode
     scss-mode
     smarty-mode
     solarized-theme
