@@ -4,53 +4,57 @@
                          ;("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
-
 (defvar require-packages
   '(
+    ac-inf-ruby
     apache-mode
     auto-complete
     coffee-mode
     dropdown-list
     egg
+    findr
+    flymake-coffee
+    flymake-css
+    flymake-easy
+    flymake-haml
+    flymake-json
+    flymake-php
+    flymake-ruby
+    flymake-sass
+    flymake-shell
+    flymake-yaml
+    gh
     gist
     git-commit-mode
     git-rebase-mode
     gitconfig-mode
     gitignore-mode
-    google-translate
-    helm
-    helm-gist
-    helm-git
-    helm-ls-git
-    helm-migemo
-    helm-open-github
-    helm-rails
-    helm-rubygems-local
-    helm-sheet
-    helm-spaces
-    helm-themes
+    haml-mode
+    inf-ruby
+    inflections
     init-loader
     js3-mode
+    jump
     less-css-mode
+    logito
     markdown-mode
-    migemo
     multi-term
-    php-auto-yasnippets
+    noflet
+    pcache
     php-mode
     popup
-    popwin
-    rbenv
     rhtml-mode
     rinari
+    ruby-additional
     ruby-block
     ruby-compilation
     ruby-dev
     ruby-electric
     ruby-end
-    ruby-hash-syntax
     ruby-interpolation
     ruby-refactor
     ruby-tools
+    rvm
     sass-mode
     scss-mode
     smarty-mode
@@ -58,6 +62,7 @@
     sql-indent
     ssh-config-mode
     sublime-themes
+    tabulated-list
     tronesque-theme
     yaml-mode
     yard-mode

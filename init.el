@@ -1,10 +1,10 @@
 ; Language & Coding System
-(prefer-coding-system 'utf-8-unix)
+(prefer-coding-system 'utf-8)
 (set-language-environment 'Japanese)
 (set-locale-environment "ja_JP.UTF-8")
-(set-default-coding-systems 'utf-8-unix)
-(set-selection-coding-system 'utf-8-unix)
-(set-buffer-file-coding-system 'utf-8-unix)
+(set-default-coding-systems 'utf-8)
+(set-selection-coding-system 'utf-8)
+(set-buffer-file-coding-system 'utf-8)
 
 ; show debug info
 (setq debug-on-error 0)
