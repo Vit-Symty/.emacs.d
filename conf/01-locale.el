@@ -12,8 +12,10 @@
        (setq default-input-method "MacOSX"))
       ((string-match "linux" system-configuration)
        (require 'mozc)
+       (set-language-environment "Japanese")
        (setq default-input-method "japanese-mozc")
        (setq mozc-candidate-style 'overlay)
        (setq mozc-candidate-style 'echo-area))  ;複数行で変換候補を表示
       )
+# mozc :: svn checkout http://mozc.googlecode.com/svn/trunk/ mozc-read-only
 
