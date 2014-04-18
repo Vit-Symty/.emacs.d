@@ -1,15 +1,12 @@
 ;; package config
-(require 'package)
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ;("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")))
-(package-initialize)
 (defvar require-packages
   '(
     ac-inf-ruby
     apache-mode
     auto-complete
     coffee-mode
+    color-theme
+    color-theme-solarized
     dropdown-list
     egg
     findr
@@ -32,7 +29,6 @@
     haml-mode
     inf-ruby
     inflections
-    init-loader
     js3-mode
     jump
     less-css-mode
@@ -68,7 +64,6 @@
     yard-mode
     yasnippet
     ))
-
 (let ((not-installed
        (loop for x in require-packages
              when (not (package-installed-p x))

@@ -23,10 +23,27 @@
             (normal-top-level-add-subdirs-to-load-path))))))
 
 ;; conf/elpa/elispディレクトリをサブディレクトリごとload-pathに追加
-(add-to-load-path "conf" "elpa" "elisp")
+(add-to-load-path "elpa" "elisp" "conf")
 
 ;; common lisp
 (require 'cl)
+
+;; package config
+(require 'package)
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+(package-initialize)
+(defvar require-packages
+  '(init-loader))
+(let ((not-installed
+       (loop for x in require-packages
+             when (not (package-installed-p x))
+             collect x)))
+  (when not-installed
+    (package-refresh-contents)
+    (dolist (pkg not-installed)
+      (package-install pkg))))
 
 ;; 初期化ファイル読み込み
 (require 'init-loader)
