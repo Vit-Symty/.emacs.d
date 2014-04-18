@@ -1,5 +1,6 @@
 ;; package config
-(defvar require-packages
+(package-initialize)
+(defvar install-packages
   '(
     ac-inf-ruby
     apache-mode
@@ -65,7 +66,7 @@
     yasnippet
     ))
 (let ((not-installed
-       (loop for x in require-packages
+       (loop for x in install-packages
              when (not (package-installed-p x))
              collect x)))
   (when not-installed
