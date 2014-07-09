@@ -5,4 +5,4 @@
   )
 (add-to-list 'ac-modes 'sass-mode)
 (add-hook 'sass-mode-hook 'ac-css-mode-setup)
-(Add-hook 'sass-mode-hook 'my-sass-mode-common-init)
+(add-hook 'sass-mode-hook 'my-sass-mode-common-init)

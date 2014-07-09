@@ -5,7 +5,7 @@
 (tool-bar-mode 0)
 
 ;; スクロールバー位置設定
-(set-scroll-bar-mode 'left) ;;left:右 right:左 nil:なし
+;(set-scroll-bar-mode 'left) ;;left:右 right:左 nil:なし
 
 ;; タイトルバーにファイルのフルパス表示
 (setq frame-title-format

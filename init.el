@@ -47,7 +47,9 @@
 
 ;; 初期化ファイル読み込み
 (require 'init-loader)
-(setq init-loader-show-log-after-init nil)
+;;(setq init-loader-show-log-after-init nil)
+(custom-set-variables
+ '(init-loader-show-log-after-init 'error-only))
 (init-loader-load "~/.emacs.d/conf")
 
 (set-default-coding-systems 'utf-8-unix)
